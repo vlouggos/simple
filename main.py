@@ -30,11 +30,11 @@ db.create_all()
 
 @app.route('/')
 def home():
-    new_book = Book(title="title1", author="author1", rating=10)
-    db.session.add(new_book)
-    db.session.commit()
-    book_to_print = Book.title
-    return render_template("index.html", book_title=book_to_print)
+    #new_book = Book(title="title1", author="author1", rating=10)
+    #db.session.add(new_book)
+    #db.session.commit()
+    #book_to_print = Book.title
+    return render_template("index.html", book_title="book_to_print")
 
 if __name__ == "__main__":
     app.run(debug=True)
