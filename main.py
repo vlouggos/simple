@@ -2,10 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 from postgres import Postgres
 import psycopg2
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-DATABASE_URL = os.environ['DATABASE_URL']
-print(DATABASE_URL)
+#DATABASE_URL = os.environ['DATABASE_URL']
+#print(DATABASE_URL)
+#db = SQLAlchemy(app)
 
 
 
