@@ -14,6 +14,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
+db.create_all()
+
 ##CREATE TABLE
 @app.route('/')
 def home():
