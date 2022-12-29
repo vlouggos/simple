@@ -18,8 +18,8 @@ db = SQLAlchemy(app)
 @app.route('/')
 def home():
     ##READ ALL RECORDS
-    all_books = db.session.query(Book).all()
-    return render_template("index.html", books=all_books)
+    #all_books = db.session.query(Book).all()
+    return render_template("index.html")#, books=all_books#
 
 
 @app.route("/add", methods=["GET", "POST"])
