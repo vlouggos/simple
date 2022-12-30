@@ -7,16 +7,18 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 #app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
-#CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
-## Optional: But it will silence the deprecation warning in the console.
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+DATABASE_URL = os.environ['DATABASE_URL']
 
-db = SQLAlchemy(app)
-
-db.create_all()
-
-##CREATE TABLE
+##CONNECT TO DB
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+### Optional: But it will silence the deprecation warning in the console.
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+#
+#db = SQLAlchemy(app)
+#
+#db.create_all()
+#
+###CREATE TABLE
 @app.route('/')
 def home():
     ##READ ALL RECORDS
